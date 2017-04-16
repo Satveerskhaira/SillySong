@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SillySong" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Backgroung image" translatesAutoresizingMaskIntoConstraints="NO" id="QuR-Yf-9ng">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPL-N4-pNy">
+                                <rect key="frame" x="91" y="20" width="193" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="Fg7-aT-vnf"/>
+                                    <constraint firstAttribute="width" constant="193" id="U91-tS-efw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="40"/>
+                                <color key="textColor" red="0.2823529541" green="0.0" blue="0.96078437569999997" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W4b-OX-Uj0">
+                                <rect key="frame" x="91" y="128" width="193" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="displayLyrics:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="edf-vM-uRU"/>
+                                    <action selector="rest:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="aOc-bm-Zwh"/>
+                                </connections>
+                            </textField>
+                            <textView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5E5-DX-pZ6">
+                                <rect key="frame" x="68" y="192" width="240" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="och-Jj-pcw"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QuR-Yf-9ng" secondAttribute="trailing" id="15S-Fq-Eea"/>
+                            <constraint firstItem="QuR-Yf-9ng" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="25x-eS-3Z7"/>
+                            <constraint firstItem="5E5-DX-pZ6" firstAttribute="top" secondItem="W4b-OX-Uj0" secondAttribute="bottom" constant="34" id="498-IA-4z7"/>
+                            <constraint firstItem="QuR-Yf-9ng" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6qS-Sh-swo"/>
+                            <constraint firstItem="QuR-Yf-9ng" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9oc-x1-TmH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W4b-OX-Uj0" secondAttribute="trailing" constant="75" id="AFQ-WG-0qQ"/>
+                            <constraint firstItem="DPL-N4-pNy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Dbp-hy-oRn"/>
+                            <constraint firstItem="W4b-OX-Uj0" firstAttribute="top" secondItem="DPL-N4-pNy" secondAttribute="bottom" constant="31" id="TDj-Lg-Ubd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5E5-DX-pZ6" secondAttribute="bottom" constant="20" id="UVj-s5-nRM"/>
+                            <constraint firstItem="5E5-DX-pZ6" firstAttribute="centerX" secondItem="W4b-OX-Uj0" secondAttribute="centerX" id="XhS-pb-oeF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QuR-Yf-9ng" secondAttribute="bottom" id="fUM-iq-u2M"/>
+                            <constraint firstItem="DPL-N4-pNy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hWX-uT-mWc"/>
+                            <constraint firstItem="QuR-Yf-9ng" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kvi-vg-lNf"/>
+                            <constraint firstItem="W4b-OX-Uj0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="sdu-5G-r0H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enterName" destination="W4b-OX-Uj0" id="Ym9-cg-lch"/>
+                        <outlet property="lyrics" destination="5E5-DX-pZ6" id="jpe-6B-01D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Backgroung image" width="320" height="568"/>
+    </resources>
+</document>
