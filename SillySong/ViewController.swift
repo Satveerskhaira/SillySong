@@ -16,12 +16,12 @@ let bananaFanaTemplate = [
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var enterName: UITextField!
-    @IBOutlet weak var lyrics: UITextView!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var lyricsView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        enterName.delegate = self
-        lyrics.backgroundColor = UIColor.clear
+        nameField.delegate = self
+        lyricsView.backgroundColor = UIColor.clear
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,16 +30,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rest(_ sender: Any) {
-        enterName.text = " "
-        lyrics.text = " "
-        lyrics.isHidden = true
+        nameField.text = " "
+        lyricsView.text = " "
+        lyricsView.isHidden = true
     }
     @IBAction func displayLyrics(_ sender: Any) {
-        lyrics.text = lyricsForName(lyrics: bananaFanaTemplate, name: enterName.text!)
-        lyrics.isHidden = false
+        if nameField.text == " " {
+            lyricsView.text = "Please enter name"
+            lyricsView.isHidden = false
+        } else{
+            lyricsView.text = lyricsForName(lyrics: bananaFanaTemplate, name: nameField.text!)
+            lyricsView.isHidden = false
+        }
     }
-
-    
 }
 
 func shortNameFromName (name : String) -> String {
@@ -50,7 +53,9 @@ func shortNameFromName (name : String) -> String {
             shortName.remove(at: shortName.startIndex)
         }else {break}
     }
-    
+    if shortName == "" {
+        shortName = name
+    }
     return shortName
 }
 

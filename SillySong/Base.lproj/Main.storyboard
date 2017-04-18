@@ -75,13 +75,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="enterName" destination="W4b-OX-Uj0" id="Ym9-cg-lch"/>
-                        <outlet property="lyrics" destination="5E5-DX-pZ6" id="jpe-6B-01D"/>
+                        <outlet property="lyricsView" destination="5E5-DX-pZ6" id="b2h-xR-PNq"/>
+                        <outlet property="nameField" destination="W4b-OX-Uj0" id="Ufa-2U-7Dh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="375" y="-7"/>
         </scene>
     </scenes>
     <resources>
